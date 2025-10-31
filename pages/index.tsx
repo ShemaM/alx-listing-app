@@ -1,7 +1,7 @@
-@"
-import { NextPage } from 'next';
+﻿import { NextPage } from 'next';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
+import { APP_CONFIG, UI_TEXT } from '../constants';
 
 const Home: NextPage = () => {
   const sampleListings = [
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <header className=\"bg-white shadow-sm border-b\">
         <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4\">
           <div className=\"flex justify-between items-center\">
-            <h1 className=\"text-2xl font-bold text-gray-900\">ALX Listing App</h1>
+            <h1 className=\"text-2xl font-bold text-gray-900\">{APP_CONFIG.APP_NAME}</h1>
             <nav className=\"flex space-x-4\">
               <Button variant=\"outline\" size=\"small\">Login</Button>
               <Button variant=\"primary\" size=\"small\">Sign Up</Button>
@@ -40,10 +40,10 @@ const Home: NextPage = () => {
       <main className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8\">
         <section className=\"text-center mb-12\">
           <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Find Your Perfect Stay</h2>
-          <p className=\"text-xl text-gray-600 max-w-2xl mx-auto mb-8\">Discover amazing places to stay around the world</p>
+          <p className=\"text-xl text-gray-600 max-w-2xl mx-auto mb-8\">{APP_CONFIG.DESCRIPTION}</p>
           <div className=\"flex justify-center gap-4\">
-            <Button variant=\"primary\" size=\"large\">Book Now</Button>
-            <Button variant=\"outline\" size=\"large\">View Details</Button>
+            <Button variant=\"primary\" size=\"large\">{UI_TEXT.BOOK_NOW}</Button>
+            <Button variant=\"outline\" size=\"large\">{UI_TEXT.VIEW_DETAILS}</Button>
           </div>
         </section>
 
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
 
       <footer className=\"bg-white border-t mt-12\">
         <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8\">
-          <p className=\"text-center text-gray-500\">&copy; {new Date().getFullYear()} ALX Listing App. All rights reserved.</p>
+          <p className=\"text-center text-gray-500\">&copy; {new Date().getFullYear()} {APP_CONFIG.APP_NAME}. All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -84,4 +84,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-"@ | Out-File -FilePath "pages\index.tsx" -Encoding utf8

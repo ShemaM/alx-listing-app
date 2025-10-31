@@ -1,5 +1,4 @@
-@"
-import { ButtonProps } from '../../interfaces';
+﻿import { ButtonProps } from '../../interfaces';
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -28,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type={type}
-      className={\`\${baseClasses} \${variantClasses[variant]} \${sizeClasses[size]} \${disabledClasses}\`}
+      className={\\ \ \ \\}
       onClick={onClick}
       disabled={disabled}
     >
@@ -38,4 +37,3 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
-"@ | Out-File -FilePath "components\common\Button.tsx" -Encoding utf8

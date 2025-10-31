@@ -1,5 +1,4 @@
-@"
-import { CardProps } from '../../interfaces';
+﻿import { CardProps } from '../../interfaces';
 
 const Card: React.FC<CardProps> = ({
   title,
@@ -19,7 +18,7 @@ const Card: React.FC<CardProps> = ({
       <div className=\"p-4\">
         <div className=\"flex justify-between items-start mb-2\">
           <h3 className=\"font-semibold text-lg text-gray-900\">{title}</h3>
-          <span className=\"font-bold text-gray-900\">${price}/night</span>
+          <span className=\"font-bold text-gray-900\">/night</span>
         </div>
         <p className=\"text-gray-600 text-sm mb-2\">{location}</p>
         <p className=\"text-gray-500 text-sm mb-3\">{description}</p>
@@ -35,4 +34,3 @@ const Card: React.FC<CardProps> = ({
 };
 
 export default Card;
-"@ | Out-File -FilePath "components\common\Card.tsx" -Encoding utf8
