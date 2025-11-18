@@ -1,1 +1,0 @@
-﻿Assets directory for images, icons, and static files

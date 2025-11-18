@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    "types": ["node", "react", "react-dom"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "outDir": "dist",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -13,8 +16,9 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["src/*"]
     }
   },
   "include": [
